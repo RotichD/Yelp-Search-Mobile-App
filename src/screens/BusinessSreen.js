@@ -21,7 +21,7 @@ const BusinessScreen = ({ navigation }) => {
 
   return (
     <View>
-      <Text>{business.name}</Text>
+      <Text style={styles.title}>{business.name}</Text>
       <FlatList
         data={business.photos}
         keyExtractor={(photo) => photo}
@@ -34,9 +34,17 @@ const BusinessScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  title: {
+    fontSize: 30,
+    fontWeight: "bold",
+    alignSelf: "center",
+    marginVertical: 20
+  },
   image: {
     height: 200,
-    width: 300,
+    width: 400,
+    alignSelf: "center",
+    marginBottom: 10
   },
 });
 
